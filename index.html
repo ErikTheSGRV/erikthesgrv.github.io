@@ -27,7 +27,7 @@
         body {
             min-height: 100%;
             background-color: var(--background-color);
-            display: inline-flex;
+            display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
@@ -51,15 +51,28 @@
         a {
             color: inherit;
         }
-        a:hover, a:focus {
+
+        a:hover,
+        a:focus {
             color: inherit;
             text-decoration: none;
+        }
+
+        .column {
+            width: 50%;
+            /*max-width: 40vw;*/
+        }
+
+        @media (max-width: 1023px) {
+            .column {
+                width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div style="width: 50%; /*max-width: 40vw;*/">
+    <div class="column">
         <h1>Riccardo<br>Biavati</h1>
         <p style="color: var(--highlight-color);">👉 Interaction Designer</p>
         <p>🥚 Carbonara Master</p>
@@ -67,7 +80,7 @@
             <p>🎺 Electric Miles Evangelist</p>
         </a>
     </div>
-    <div style="width: 50%; /*max-width: 40vw;*/">
+    <div class="column">
         <p>Non ci provo neanche più ad organizzare i miei progetti e lavori in un portfolio, tutte le volte che
             comincio, dopo poco, mi scontro con la più esistenziale delle domande: <span
                 style="font-weight: bold; font-style: italic;">“e se invece facessi così?”</span></p>
